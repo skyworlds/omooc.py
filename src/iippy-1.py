@@ -12,14 +12,14 @@ def range100():
     global secret_num , n , mode
     mode = 1
     secret_num = random.randint(0, 99)
-    print 'A integer from 0 to 99 has been chosen, guess!!!'
+    print 'An integer from 0 to 99 has been chosen, guess!!!'
     n = n_calculator(100 , 0)
 
 def range1000():     
     global secret_num , n , mode
     mode = 2
     secret_num = random.randint(0, 999)
-    print 'A integer from 0 to 999 has been chosen, guess!!!'
+    print 'An integer from 0 to 999 has been chosen, guess!!!'
     n = n_calculator(1000 , 0)
     
 def n_calculator(high , low):
