@@ -12,14 +12,14 @@ def range100():
     global secret_num , n , mode
     mode = 1
     secret_num = random.randint(0, 99)
-    print 'A positive integer from 0 to 99 has been chosen, guess!!!'
+    print 'A integer from 0 to 99 has been chosen, guess!!!'
     n = n_calculator(100 , 0)
 
 def range1000():     
     global secret_num , n , mode
     mode = 2
     secret_num = random.randint(0, 999)
-    print 'A positive integer from 0 to 999 has been chosen, guess!!!'
+    print 'A integer from 0 to 999 has been chosen, guess!!!'
     n = n_calculator(1000 , 0)
     
 def n_calculator(high , low):
@@ -41,6 +41,12 @@ def input_guess(guess):
         print 'It has to be a positive integer. Try again...'
         return()
     global secret_num , n , mode
+    if mode == 1 and guess > 99:
+        print 'You should guess an integer within the range [0, 99]!!! Try again...'
+        return()
+    elif mode == 2 and guess >999:
+        print 'You should guess an integer within the range [0, 999]!!! Try again...'
+        return()
     if guess < secret_num:
         print 'Higher'
     elif guess > secret_num:
