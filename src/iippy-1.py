@@ -48,9 +48,9 @@ def input_guess(guess):
         print 'You should guess an integer within the range [0, 999]!!! Try again...'
         return()
     if guess < secret_num:
-        print 'Higher'
-    elif guess > secret_num:
         print 'Lower'
+    elif guess > secret_num:
+        print 'Higher'
     else:
         print 'Correct'
         print "Let's play the game one more time!"
@@ -73,10 +73,11 @@ def input_guess(guess):
     
 
     
-frame = simplegui.create_frame('Guess the number', 100, 100)
+frame = simplegui.create_frame('Guess the number', 300, 200)
 
+frame.add_label('Type your number below:',200)
 frame.add_input('',input_guess,50)
-frame.add_button('Choose a positive integer from 0 to 99.',range100,250)
-frame.add_button('Choose a positive integer from 0 to 999.',range1000,250)
+frame.add_button('Choose a positive integer from 0 to 99.',range100,200)
+frame.add_button('Choose a positive integer from 0 to 999.',range1000,210)
  
 new_game()
